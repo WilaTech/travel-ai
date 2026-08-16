@@ -1,6 +1,6 @@
 package com.wilatech.travelai.dto.gemini;
 
-public record Part(
+public record ResponsePart(
         String text
 ) {
 }
