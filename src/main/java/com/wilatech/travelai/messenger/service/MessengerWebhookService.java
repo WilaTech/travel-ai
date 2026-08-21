@@ -2,7 +2,7 @@ package com.wilatech.travelai.messenger.service;
 
 import com.wilatech.travelai.messenger.client.MessengerClient;
 import com.wilatech.travelai.messenger.webhook.dto.WebhookRequest;
-import com.wilatech.travelai.travel.service.TravelService;
+import com.wilatech.travelai.travel.service.TravelAssistantService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class MessengerWebhookService {
 
     private final MessengerClient messengerClient;
 
-    private final TravelService travelService;
+    private final TravelAssistantService travelAssistantService;
 
     public void process(WebhookRequest request) {
         var messaging = request.entry().getFirst().messaging().getFirst();
@@ -25,7 +25,7 @@ public class MessengerWebhookService {
         log.info("Sender: {}", senderId);
         log.info("Message: {}", message);
 
-        String reply = travelService.getRecommendation(message);
+        String reply = travelAssistantService.getRecommendation(message);
         if (reply.length() > 2000) {
             reply = reply.substring(0, 2000);
         }

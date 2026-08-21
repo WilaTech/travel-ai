@@ -1,6 +1,6 @@
 package com.wilatech.travelai.travel.service;
 
-public interface TravelService {
+public interface TravelAssistantService {
 
     String getRecommendation(String location);
 }

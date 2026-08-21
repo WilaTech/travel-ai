@@ -1,6 +1,6 @@
 package com.wilatech.travelai.travel.controller;
 
-import com.wilatech.travelai.travel.service.TravelService;
+import com.wilatech.travelai.travel.service.TravelAssistantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TravelController {
 
-    private final TravelService travelService;
+    private final TravelAssistantService travelAssistantService;
 
     @GetMapping("/api/travel")
     public String travel(@RequestParam String location) {
-        return travelService.getRecommendation(location);
+        return travelAssistantService.getRecommendation(location);
     }
 }
