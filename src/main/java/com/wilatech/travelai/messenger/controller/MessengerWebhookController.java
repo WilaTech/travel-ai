@@ -1,6 +1,8 @@
 package com.wilatech.travelai.messenger.controller;
 
 import com.wilatech.travelai.messenger.properties.MessengerProperties;
+import com.wilatech.travelai.messenger.service.MessengerWebhookService;
+import com.wilatech.travelai.messenger.webhook.dto.WebhookRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -14,6 +16,8 @@ import org.springframework.web.bind.annotation.*;
 public class MessengerWebhookController {
 
     private final MessengerProperties messengerProperties;
+
+    private final MessengerWebhookService messengerWebhookService;
 
     @GetMapping
     public ResponseEntity<String> verify(
@@ -31,8 +35,11 @@ public class MessengerWebhookController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> webhook() {
+    public ResponseEntity<Void> webhook(@RequestBody WebhookRequest request) {
         log.info("Received webhook");
+
+        messengerWebhookService.process(request);
+
         return ResponseEntity.ok().build();
     }
 }

@@ -5,6 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "messenger")
 public record MessengerProperties(
         String verifyToken,
-        String pageAccessToken
+        String pageAccessToken,
+        String apiUrl
 ) {
 }
