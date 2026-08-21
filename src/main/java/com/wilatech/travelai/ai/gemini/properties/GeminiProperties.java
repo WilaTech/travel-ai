@@ -1,4 +1,4 @@
-package com.wilatech.travelai.config.properties;
+package com.wilatech.travelai.ai.gemini.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

@@ -1,6 +1,6 @@
-package com.wilatech.travelai.controller;
+package com.wilatech.travelai.travel.controller;
 
-import com.wilatech.travelai.service.TravelService;
+import com.wilatech.travelai.travel.service.TravelService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,7 +1,6 @@
-package com.wilatech.travelai.config;
+package com.wilatech.travelai.ai.gemini.config;
 
-import com.wilatech.travelai.config.properties.GeminiProperties;
-import org.springframework.beans.factory.annotation.Value;
+import com.wilatech.travelai.ai.gemini.properties.GeminiProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;

@@ -1,13 +1,12 @@
-package com.wilatech.travelai.client;
+package com.wilatech.travelai.ai.client;
 
-import com.wilatech.travelai.config.properties.GeminiProperties;
-import com.wilatech.travelai.dto.gemini.GeminiResponse;
-import com.wilatech.travelai.dto.gemini.RequestContent;
-import com.wilatech.travelai.dto.gemini.GeminiRequest;
-import com.wilatech.travelai.dto.gemini.RequestPart;
-import com.wilatech.travelai.exception.AIClientException;
+import com.wilatech.travelai.ai.gemini.properties.GeminiProperties;
+import com.wilatech.travelai.ai.gemini.dto.GeminiResponse;
+import com.wilatech.travelai.ai.gemini.dto.RequestContent;
+import com.wilatech.travelai.ai.gemini.dto.GeminiRequest;
+import com.wilatech.travelai.ai.gemini.dto.RequestPart;
+import com.wilatech.travelai.ai.exception.AIClientException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;

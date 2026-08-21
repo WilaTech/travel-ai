@@ -1,4 +1,4 @@
-package com.wilatech.travelai.client;
+package com.wilatech.travelai.ai.client;
 
 public interface AIClient {
 

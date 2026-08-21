@@ -1,4 +1,4 @@
-package com.wilatech.travelai.exception;
+package com.wilatech.travelai.ai.exception;
 
 public class AIClientException extends RuntimeException {
 

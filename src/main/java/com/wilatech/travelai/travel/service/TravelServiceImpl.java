@@ -1,6 +1,6 @@
-package com.wilatech.travelai.service;
+package com.wilatech.travelai.travel.service;
 
-import com.wilatech.travelai.client.AIClient;
+import com.wilatech.travelai.ai.client.AIClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

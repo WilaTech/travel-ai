@@ -1,4 +1,4 @@
-package com.wilatech.travelai.config;
+package com.wilatech.travelai.ai.openai.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

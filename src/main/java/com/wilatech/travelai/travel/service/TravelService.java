@@ -1,4 +1,4 @@
-package com.wilatech.travelai.service;
+package com.wilatech.travelai.travel.service;
 
 public interface TravelService {
 
